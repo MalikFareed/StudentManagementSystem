@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86422F7B-DE7E-404D-B6AC-C7EDD15B8D03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentManagementSystem_v0</RootNamespace>
+    <AssemblyName>StudentManagementSystem_v0</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>..\..\..\..\..\Program Files\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201904021743191_RegistrationIDColumnAddedInRegisterUserTable.cs" />
+    <Compile Include="Migrations\201904021743191_RegistrationIDColumnAddedInRegisterUserTable.Designer.cs">
+      <DependentUpon>201904021743191_RegistrationIDColumnAddedInRegisterUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Strategy Pattern\CalculationPlanner.cs" />
+    <Compile Include="Strategy Pattern\GPA.cs" />
+    <Compile Include="Strategy Pattern\Percentage.cs" />
+    <Compile Include="Strategy Pattern\Strategy.cs" />
+    <Compile Include="_CRUD Operations\Facade Pattern\LoginFacade.cs" />
+    <Compile Include="_CRUD Operations\ChainOfResponsibility Pattern\FindEveningStudent.cs" />
+    <Compile Include="_CRUD Operations\ChainOfResponsibility Pattern\FindMorningStudent.cs" />
+    <Compile Include="_CRUD Operations\ChainOfResponsibility Pattern\FindWeekendStudent.cs" />
+    <Compile Include="_CRUD Operations\ChainOfResponsibility Pattern\IChian.cs" />
+    <Compile Include="_CRUD Operations\Proxy Pattern\LoginProxy.cs" />
+    <Compile Include="_CRUD Operations\Proxy Pattern\UserRegistrationCRUD.cs" />
+    <Compile Include="_CRUD Operations\Proxy Pattern\IVerifyUser.cs" />
+    <Compile Include="_Models\CourseRegistration.cs" />
+    <Compile Include="GenerateTranscript.cs" />
+    <Compile Include="Migrations\201903301709009_CourseTitleColoumnAddedInCourseOfferingTable.cs" />
+    <Compile Include="Migrations\201903301709009_CourseTitleColoumnAddedInCourseOfferingTable.Designer.cs">
+      <DependentUpon>201903301709009_CourseTitleColoumnAddedInCourseOfferingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903302139376_CourseRegistrationTableAdded.cs" />
+    <Compile Include="Migrations\201903302139376_CourseRegistrationTableAdded.Designer.cs">
+      <DependentUpon>201903302139376_CourseRegistrationTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903311011568_MarksEntryTableAdded.cs" />
+    <Compile Include="Migrations\201903311011568_MarksEntryTableAdded.Designer.cs">
+      <DependentUpon>201903311011568_MarksEntryTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_CRUD Operations\AssignCourseCRUD.cs" />
+    <Compile Include="_CRUD Operations\CourseRegistrationCRUD.cs" />
+    <Compile Include="_CRUD Operations\MarksEntryCRUD.cs" />
+    <Compile Include="_Models\AssignCourse.cs" />
+    <Compile Include="Migrations\201903301129012_AssignCoursesTableAdded.cs" />
+    <Compile Include="Migrations\201903301129012_AssignCoursesTableAdded.Designer.cs">
+      <DependentUpon>201903301129012_AssignCoursesTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Models\CourseOffering.cs" />
+    <Compile Include="Migrations\201903281936407_InitialModel.cs" />
+    <Compile Include="Migrations\201903281936407_InitialModel.Designer.cs">
+      <DependentUpon>201903281936407_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903300948397_CourseOfferingsTableAdded.cs" />
+    <Compile Include="Migrations\201903300948397_CourseOfferingsTableAdded.Designer.cs">
+      <DependentUpon>201903300948397_CourseOfferingsTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_CRUD Operations\ClassScheduleCRUD.cs" />
+    <Compile Include="_CRUD Operations\CourseCRUD.cs" />
+    <Compile Include="_CRUD Operations\CourseOfferingsCRUD.cs" />
+    <Compile Include="_CRUD Operations\DepartmentCRUD.cs" />
+    <Compile Include="_CRUD Operations\ProgramCRUD.cs" />
+    <Compile Include="_CRUD Operations\StudentCRUD.cs" />
+    <Compile Include="_CRUD Operations\TeacherCRUD.cs" />
+    <Compile Include="_Froms\StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Froms\StudentDashboard.Designer.cs">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Froms\TeacherDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Froms\TeacherDashboard.Designer.cs">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Models\Factory Method Pattern\StudentFactory.cs" />
+    <Compile Include="_Models\ClassSchedule.cs" />
+    <Compile Include="_Models\Admin.cs" />
+    <Compile Include="_Models\Factory Method Pattern\EveningStudent.cs" />
+    <Compile Include="_Models\Factory Method Pattern\EveningStudentFactory.cs" />
+    <Compile Include="_Models\MarksEntry.cs" />
+    <Compile Include="_Models\Factory Method Pattern\MorningStudent.cs" />
+    <Compile Include="_Models\Factory Method Pattern\MorningStudentFactory.cs" />
+    <Compile Include="_Models\RegisterUser.cs" />
+    <Compile Include="_Froms\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Froms\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Froms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Froms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Models\Course.cs" />
+    <Compile Include="_Models\Department.cs" />
+    <Compile Include="_Froms\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Froms\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActions.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="_Models\Programs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMSDbContext.cs" />
+    <Compile Include="_Models\Factory Method Pattern\IStudent.cs" />
+    <Compile Include="_Models\Teacher.cs" />
+    <Compile Include="_Models\Factory Method Pattern\WeekendStudent.cs" />
+    <Compile Include="_Models\Factory Method Pattern\WeekendStudentFactory.cs" />
+    <Compile Include="_UserControls\Admin\ucAddCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddCourse.Designer.cs">
+      <DependentUpon>ucAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddDepartment.Designer.cs">
+      <DependentUpon>ucAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddProgram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddProgram.Designer.cs">
+      <DependentUpon>ucAddProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddStudent.Designer.cs">
+      <DependentUpon>ucAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAddTeacher.Designer.cs">
+      <DependentUpon>ucAddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\ucAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\ucAddUser.Designer.cs">
+      <DependentUpon>ucAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Teacher\ucMarksEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Teacher\ucMarksEntry.Designer.cs">
+      <DependentUpon>ucMarksEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucCourseOfferings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucCourseOfferings.Designer.cs">
+      <DependentUpon>ucCourseOfferings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAssignCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Admin\ucAssignCourses.Designer.cs">
+      <DependentUpon>ucAssignCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucRegisterCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucRegisterCourse.Designer.cs">
+      <DependentUpon>ucRegisterCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Teacher\ucViewCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Teacher\ucViewCourses.Designer.cs">
+      <DependentUpon>ucViewCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucCheckResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucCheckResult.Designer.cs">
+      <DependentUpon>ucCheckResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucViewTranscript.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_UserControls\Student\ucViewTranscript.Designer.cs">
+      <DependentUpon>ucViewTranscript.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\201903281936407_InitialModel.resx">
+      <DependentUpon>201903281936407_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903300948397_CourseOfferingsTableAdded.resx">
+      <DependentUpon>201903300948397_CourseOfferingsTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903301129012_AssignCoursesTableAdded.resx">
+      <DependentUpon>201903301129012_AssignCoursesTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903301709009_CourseTitleColoumnAddedInCourseOfferingTable.resx">
+      <DependentUpon>201903301709009_CourseTitleColoumnAddedInCourseOfferingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903302139376_CourseRegistrationTableAdded.resx">
+      <DependentUpon>201903302139376_CourseRegistrationTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903311011568_MarksEntryTableAdded.resx">
+      <DependentUpon>201903311011568_MarksEntryTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904021743191_RegistrationIDColumnAddedInRegisterUserTable.resx">
+      <DependentUpon>201904021743191_RegistrationIDColumnAddedInRegisterUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Froms\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Froms\StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Froms\TeacherDashboard.resx">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Froms\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Froms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="_UserControls\Admin\ucAddCourse.resx">
+      <DependentUpon>ucAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucAddDepartment.resx">
+      <DependentUpon>ucAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucAddProgram.resx">
+      <DependentUpon>ucAddProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucAddStudent.resx">
+      <DependentUpon>ucAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucAddTeacher.resx">
+      <DependentUpon>ucAddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\ucAddUser.resx">
+      <DependentUpon>ucAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Teacher\ucMarksEntry.resx">
+      <DependentUpon>ucMarksEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucCourseOfferings.resx">
+      <DependentUpon>ucCourseOfferings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Admin\ucAssignCourses.resx">
+      <DependentUpon>ucAssignCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Student\ucRegisterCourse.resx">
+      <DependentUpon>ucRegisterCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Teacher\ucViewCourses.resx">
+      <DependentUpon>ucViewCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Student\ucCheckResult.resx">
+      <DependentUpon>ucCheckResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_UserControls\Student\ucViewTranscript.resx">
+      <DependentUpon>ucViewTranscript.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MorningStudent.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkmark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_approve_and_update_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bulleted_list.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_broom.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_students.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_department.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_p.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_training.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_assign.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_batch_assign.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_assignment_turned_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_assign_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_assign_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_left_arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_right_arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_group_man_man.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_menu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_assign_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_students1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_course_assign_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_batch_assign1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_training1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_book1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_p1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_department1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_21.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_22.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
